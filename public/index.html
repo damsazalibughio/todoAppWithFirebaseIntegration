@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>   
+  <div class="container">
+    <div class="col-md-10 mt-3">
+      <h1 class="display-4 text-center text-info m-3"> <i class='fa fa-tasks'></i> Todo App</h1>
+      <div class="card ">
+        <div class="card-header">
+          <h6 class="m-1 text-info"> 
+          <i class='fa fa-tasks'></i> Todo App</h6>     
+        </div>
+        <div class="d-flex flex-row m-2">
+          <div>
+            <form action="">
+              <div  class="m-2 d-flex flex-row">
+                  <input id="todo-item" class="form-control  me-2 " type="text"   placeholder="Add todo">
+                  <button  class="btn btn-info text-white mx-1 add"  id="add-todo">
+                    <i class='fa fa-plus'></i>  
+                </button>
+              </div>
+            </form>   
+          </div>
+
+          <div class="ms-auto mt-2 me-2">           
+            <button  class="btn btn-outline-danger delete-all" id="delete-all-todos">
+                <i class='fa fa-trash'></i> Delete All
+            </button>        
+          </div>
+        </div>
+        
+        
+        <div id="">
+          <table class="table table-sm table-striped table-responsive{-md} table-hover">
+            <thead class="bg-info text-light"> 
+              <tr class=""> 
+              <th style="width: 10%;">No#</th>       
+              <th style="width: 70%;">Todo's</th>             
+              <th style="width: 20%;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <!-- <tr >  
+                <td>1</td>          
+                <td>lkjklh</td> 
+                <td class="d-flex flex-row"> 
+                  <button class="btn btn-sm btn-info text-white mx-1 edit">
+                    <i class="fa fa-edit"></i>
+                    Edit
+                  </button>    
+                  <button type="submit" class="delete btn btn-sm btn-danger" > 
+                    <i class="fa fa-trash" aria-hidden="true"></i> 
+                    Delete
+                    </button>
+                </td>
+              </tr> -->
+
+              
+            </tbody>        
+          </table>
+        </div>
+        
+      
+      </div> 
+    </div> 
+  </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+<script >    
+      
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyB1rvUcS3blIuaRFiqW7pjsIQsQtWegFr4",
+        authDomain: "todoapp-c30b0.firebaseapp.com",
+        projectId: "todoapp-c30b0",
+        storageBucket: "todoapp-c30b0.appspot.com",
+        messagingSenderId: "435378574615",
+        appId: "1:435378574615:web:bf12825a7a2a753536d352"
+      };
+    
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="app.js" ></script>
+</body>
+</html>
