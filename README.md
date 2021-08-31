@@ -1,4 +1,4 @@
 # todoAppWithFirebaseIntegration
 
-app has been removed due to security rules
+app has been reasons due to security rules
 will be uploaded soon
